@@ -1,16 +1,24 @@
 using UnityEngine;
 
-public class BulletPlayerSpawner : MonoBehaviour
+public class BulletPlayerSpawner : objectPool
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    private static BulletPlayerSpawner instance;
 
-    // Update is called once per frame
-    void Update()
+    public static BulletPlayerSpawner Instance { get => instance; }
+    [SerializeField] public static string bulletOne = "BulletOne";
+    [SerializeField] public static string bulletTwo = "BulletTwo";
+    [SerializeField] public static string bulletThree = "BulletThree";
+
+    protected override void Awake()
     {
-        
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
+    
 }

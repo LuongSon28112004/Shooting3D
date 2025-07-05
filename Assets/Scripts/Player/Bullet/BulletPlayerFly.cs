@@ -1,16 +1,19 @@
 using UnityEngine;
 
-public class BulletPlayerFly : MonoBehaviour
+public class BulletPlayerFly : ModelMonoBehaviour, IFly
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] private float speed = 5f;
+    [SerializeField] private Vector3 direction = Vector3.forward;
+
+    public Vector3 Direction { get => direction; set => direction = value; }
+
+    protected virtual void FixedUpdate()
     {
-        
+        this.Fly();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Fly()
     {
-        
+        transform.parent.Translate(direction * speed * Time.deltaTime);
     }
 }

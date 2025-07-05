@@ -9,6 +9,20 @@ public class Crosshair3D : ModelMonoBehaviour
     private float rayDistance = 100f;
     private Vector3 enlargedScale = new Vector3(1.5f, 1.5f, 1.5f);
     private Vector3 defaultScale = new Vector3(1f, 1f, 1f);
+    private static Crosshair3D instance;
+    public static Crosshair3D Instance { get => instance; }
+
+    protected override void Awake()
+    {
+        base.Awake();
+        if (instance != null)
+        {
+            Debug.LogWarning("Multiple instances of Crosshair3D detected. Destroying the new instance.");
+            return;
+        }
+        instance = this;
+        DontDestroyOnLoad(gameObject.transform.parent.gameObject);
+    }
 
     protected override void Update()
     {

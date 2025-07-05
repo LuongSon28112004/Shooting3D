@@ -1,16 +1,9 @@
 using UnityEngine;
 
-public class BulletPlayerDewpawnByDistance : MonoBehaviour
+public class BulletPlayerDespawnByDistance : DeSpawnByDistance
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    protected override void DeSpawnObject()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        BulletPlayerSpawner.Instance.Despawn(transform.parent);
     }
 }

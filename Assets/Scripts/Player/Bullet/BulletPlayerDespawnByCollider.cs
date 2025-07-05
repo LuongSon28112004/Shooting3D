@@ -1,16 +1,17 @@
 using UnityEngine;
 
-public class BulletPlayerDespawnByCollider : MonoBehaviour
+public class BulletPlayerDespawnByCollider : DespawnByCollider
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void OnCollisionEnter(Collision other)
     {
-        
+        if (other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("Wall"))
+        {
+            isDeSpawn = true;
+        }
     }
-
-    // Update is called once per frame
-    void Update()
+    
+    protected override void DeSpawnObject()
     {
-        
+        BulletPlayerSpawner.Instance.Despawn(transform.parent);
     }
 }

@@ -351,13 +351,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2851900535630215549}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.14064202, z: -0, w: 0.99006057}
-  m_LocalPosition: {x: 0.413, y: 0.79, z: 0.656}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 985329159947994224}
-  m_LocalEulerAnglesHint: {x: 0, y: 16.17, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3918795059548171064
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1146,13 +1146,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7158894432663354892}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.14064202, z: -0, w: 0.99006057}
-  m_LocalPosition: {x: 0.413, y: 0.79, z: 0.656}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 985329159947994224}
-  m_LocalEulerAnglesHint: {x: 0, y: 16.17, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3525766604777540036
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1256,7 +1256,7 @@ Transform:
   m_GameObject: {fileID: 7466726626184235908}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.07610174, z: -0, w: 0.99710006}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.09, y: 0.71, z: 0.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1361,13 +1361,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7767585339330253528}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.14064202, z: -0, w: 0.99006057}
-  m_LocalPosition: {x: 0.413, y: 0.79, z: 0.656}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 985329159947994224}
-  m_LocalEulerAnglesHint: {x: 0, y: 16.17, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6514392870641796427
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2006,7 +2006,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f21c308cd41ea148b9aa395a50dc951, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCamera: {fileID: 4376923006915532977}
-  rayDistance: 100
-  enlargedScale: {x: 1.5, y: 1.5, z: 1.5}
-  defaultScale: {x: 1, y: 1, z: 1}
+  weaponObject: {fileID: 0}

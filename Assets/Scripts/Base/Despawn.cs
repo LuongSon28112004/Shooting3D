@@ -1,16 +1,23 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class Despawner : MonoBehaviour
+public abstract class Despawn : ModelMonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    protected virtual void FixedUpdate()
+   {
+        this.DeSpawning();
+   }
+
+    protected void DeSpawning()
     {
-        
+        if(!this.CanDespawn()) return;
+        this.DeSpawnObject();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    protected virtual void DeSpawnObject(){
+        Destroy(transform.parent.gameObject);
     }
+
+    protected abstract bool CanDespawn();
 }
