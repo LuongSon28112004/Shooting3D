@@ -35,7 +35,7 @@ public class Crosshair3D : ModelMonoBehaviour
         if (Physics.Raycast(ray, out hit, rayDistance))
         {
             // Nếu chạm đúng đối tượng có tag "Target"
-            if (hit.collider.CompareTag("Target"))
+            if (hit.collider.CompareTag("Enemy"))
             {
                 transform.localScale = enlargedScale;
                 rayColor = Color.red; // Chuyển sang đỏ nếu trúng mục tiêu

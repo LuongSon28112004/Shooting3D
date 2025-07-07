@@ -5,11 +5,13 @@ using UnityEngine;
 public class WeaponAnimation : ModelMonoBehaviour
 {
     [SerializeField] private Animator animator;
-    [SerializeField] private int WeasponPosition = 0;
-
+    [SerializeField] private int weasponPosition = 0;
     [SerializeField] private bool hasSwap = true;
     [SerializeField] private bool hasAttack = true;
     [SerializeField] private float timeSwap = 0.5f;
+    [SerializeField] private float timeAttack = 0.5f;
+
+    public int WeasponPosition { get => weasponPosition;}
 
     protected override void Awake()
     {
@@ -39,15 +41,15 @@ public class WeaponAnimation : ModelMonoBehaviour
     private IEnumerator Weapon()
     {
         hasSwap = false;
-        WeasponPosition++;
-        if (WeasponPosition >= WeaponAnimationController.Instance.ObjectWeapons.ObjectsToLoad.Count)
+        weasponPosition++;
+        if (weasponPosition >= WeaponAnimationController.Instance.ObjectWeapons.ObjectsToLoad.Count)
         {
-            WeasponPosition = 0;
+            weasponPosition = 0;
         }
 
-        WeaponAnimationController.Instance.ObjectWeapons.ObjectsToLoad[(WeasponPosition - 1 < 0) ? WeaponAnimationController.Instance.ObjectWeapons.ObjectsToLoad.Count - 1 : WeasponPosition - 1].SetActive(false);
-        WeaponAnimationController.Instance.ObjectWeapons.ObjectsToLoad[WeasponPosition].SetActive(true);
-        animator.SetFloat("TypeWeapon", WeasponPosition);
+        WeaponAnimationController.Instance.ObjectWeapons.ObjectsToLoad[(weasponPosition - 1 < 0) ? WeaponAnimationController.Instance.ObjectWeapons.ObjectsToLoad.Count - 1 : weasponPosition - 1].SetActive(false);
+        WeaponAnimationController.Instance.ObjectWeapons.ObjectsToLoad[weasponPosition].SetActive(true);
+        animator.SetFloat("TypeWeapon", weasponPosition);
         animator.SetBool("IsSwap", true);
         AudioWeapon.Instance.PlaySwapSound();
         yield return new WaitForSeconds(timeSwap);
@@ -68,7 +70,7 @@ public class WeaponAnimation : ModelMonoBehaviour
         hasAttack = false;
         animator.SetBool("IsAttack", true);
         AudioWeapon.Instance.PlayAttackSound(WeasponPosition);
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(timeAttack);
         animator.SetBool("IsAttack", false);
         hasAttack = true;
     }

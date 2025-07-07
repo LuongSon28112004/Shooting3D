@@ -4,14 +4,15 @@ public class BulletPlayerDespawnByCollider : DespawnByCollider
 {
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("Wall"))
+        if (other.gameObject.CompareTag("Enemy"))
         {
             isDeSpawn = true;
+            Debug.Log("Bullet collided with an enemy and will despawn.");
         }
     }
     
     protected override void DeSpawnObject()
     {
-        BulletPlayerSpawner.Instance.Despawn(transform.parent);
+        BulletPlayerSpawner.Instance.Despawn(transform);
     }
 }

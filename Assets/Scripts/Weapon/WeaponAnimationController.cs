@@ -5,9 +5,11 @@ public class WeaponAnimationController : ModelMonoBehaviour
     private static WeaponAnimationController instance;
 
     public static WeaponAnimationController Instance { get => instance; }
-    public ObjectWeapons ObjectWeapons { get => objectWeapons;  set => objectWeapons = value; }
 
     [SerializeField] private ObjectWeapons objectWeapons;
+    [SerializeField] private WeaponAnimation weaponAnimation;
+    public ObjectWeapons ObjectWeapons { get => objectWeapons;  set => objectWeapons = value; }
+    public WeaponAnimation WeaponAnimation { get => weaponAnimation; }
 
     protected override void Awake()
     {
@@ -19,13 +21,17 @@ public class WeaponAnimationController : ModelMonoBehaviour
         }
         instance = this;
     }
-    
+
     protected override void LoadComponents()
     {
         base.LoadComponents();
         if (objectWeapons == null)
         {
             objectWeapons = GetComponent<ObjectWeapons>();
+        }
+        if (weaponAnimation == null)
+        {
+            weaponAnimation = GetComponent<WeaponAnimation>();
         }
     }
 }

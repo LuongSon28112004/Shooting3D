@@ -19,7 +19,7 @@ public class AudioWeapon : ModelMonoBehaviour
             return;
         }
         instance = this;
-        DontDestroyOnLoad(gameObject.transform.parent.gameObject);
+        DontDestroyOnLoad(gameObject);
     }
 
     protected override void Start()

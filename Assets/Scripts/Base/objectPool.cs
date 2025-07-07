@@ -47,9 +47,9 @@ public class objectPool : ModelMonoBehaviour
             return null;
         }
         Transform newPrefab = this.getObjectFromPool(prefab);
-        newPrefab.position = spawnPos;
-        //newPrefab.rotation = rotation;
         newPrefab.parent = this.Holder;
+        newPrefab.position = spawnPos;
+        newPrefab.rotation = rotation;
         return newPrefab;
     }
 
