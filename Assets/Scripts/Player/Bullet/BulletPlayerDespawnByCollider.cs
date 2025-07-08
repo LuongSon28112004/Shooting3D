@@ -13,6 +13,6 @@ public class BulletPlayerDespawnByCollider : DespawnByCollider
     
     protected override void DeSpawnObject()
     {
-        BulletPlayerSpawner.Instance.Despawn(transform);
+        BulletPlayerSpawner.Instance.Despawn(transform.parent);
     }
 }
