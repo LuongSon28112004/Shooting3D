@@ -28,7 +28,7 @@ public class EnemyDamageReceiver : DamageReceiver
 
     protected override void Dead()
     {
-        Destroy(this.gameObject);
+        Destroy(this.transform.parent.gameObject);
     }
     
 }
