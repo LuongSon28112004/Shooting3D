@@ -1,10 +1,9 @@
 using UnityEngine;
 
-[RequireComponent(typeof(BoxCollider))]
-public class EnemyDamageReceiver : DamageReceiver
+public class PlayerDamageReceiver : DamageReceiver
 {
-    [Header("Enemy Damage Receiver Settings")]
-    [SerializeField] private bool isDead = false;
+    [Header("Player Damage Receiver")]
+   [SerializeField] private bool isDead = false;
 
     protected override void Update()
     {
@@ -28,7 +27,6 @@ public class EnemyDamageReceiver : DamageReceiver
 
     protected override void Dead()
     {
-        EnemySpawner.Instance.Despawn(transform.parent);
+        Destroy(this.gameObject);
     }
-    
 }
