@@ -27,6 +27,6 @@ public class PlayerDamageReceiver : DamageReceiver
 
     protected override void Dead()
     {
-        Destroy(this.gameObject);
+        //Destroy(this.gameObject);
     }
 }

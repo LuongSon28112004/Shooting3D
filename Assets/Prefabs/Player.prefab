@@ -913,9 +913,10 @@ GameObject:
   - component: {fileID: 2252113391812009795}
   - component: {fileID: 7744501033658051613}
   - component: {fileID: 6388107651763865252}
+  - component: {fileID: 4965923043140109341}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1119,6 +1120,21 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   memeClips:
   - {fileID: 8300000, guid: d407d632cde6c00468a60035e7807835, type: 3}
+--- !u!114 &4965923043140109341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7077623419802283271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 107895fbb18c0814db958361e434c9e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 1
+  maxHp: 1
+  isDead: 0
 --- !u!1 &7158894432663354892
 GameObject:
   m_ObjectHideFlags: 0

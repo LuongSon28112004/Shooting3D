@@ -103,7 +103,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6376452924744172213}
   - component: {fileID: 1941548706096853103}
-  - component: {fileID: 6376225640382706687}
   - component: {fileID: 8824990104318572630}
   - component: {fileID: 416063865432136941}
   - component: {fileID: 2568958484484501075}
@@ -148,35 +147,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.000091338836, y: 0.000079581056, z: 0.00047960723}
-  m_Center: {x: 0.000000036771276, y: 0.0000065130635, z: 0.000029682347}
---- !u!54 &6376225640382706687
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3707440312648948887}
-  serializedVersion: 4
-  m_Mass: 0.0000001
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Size: {x: 0.000122048776, y: 0.000079581056, z: 0.0005611035}
+  m_Center: {x: -0.0000038049743, y: 0.0000065130635, z: 0.000026228874}
 --- !u!114 &8824990104318572630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,8 +162,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletCtl: {fileID: 0}
-  boxCollider: {fileID: 1941548706096853103}
-  rigidbody: {fileID: 6376225640382706687}
 --- !u!114 &416063865432136941
 MonoBehaviour:
   m_ObjectHideFlags: 0

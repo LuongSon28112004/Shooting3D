@@ -1,7 +1,6 @@
 using UnityEngine;
 
-[RequireComponent(typeof(BoxCollider))]
-[RequireComponent(typeof(Rigidbody))]
+
 public class BulletPlayerDamageSender : DamageSender
 {
     [Header("Bullet Player Damage Sender Settings")]
